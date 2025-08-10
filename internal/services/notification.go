@@ -2,25 +2,23 @@ package services
 
 import (
 	"github.com/MostafaSensei106/Riko-Chan/config"
+	"github.com/MostafaSensei106/Riko-Chan/internal/utils"
 )
 
 type NotificationService struct {
 	config *config.Config
-	//logger *utils.Logger
+	logger *utils.Logger
 }
 
-func NewNotification(ctf *config.Config,
-
-// logger *utils.Logger
-) *NotificationService {
+func NewNotificationService(cfg *config.Config, logger *utils.Logger) *NotificationService {
 	return &NotificationService{
-		config: ctf,
-		//	logger: logger,
+		config: cfg,
+		logger: logger,
 	}
 }
 
 func (s *NotificationService) SendNotification(userID int64, message string) error {
 	// TODO: Implement notification sending via Telegram API
-	//s.logger.Info("Notification sent", "user_id", userID, "message", message)
+	s.logger.Info("Notification sent", "user_id", userID, "message", message)
 	return nil
 }
