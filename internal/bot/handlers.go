@@ -9,6 +9,7 @@ import (
 	"github.com/google/uuid"
 
 	"github.com/MostafaSensei106/Riko-Chan/internal/models"
+	"github.com/MostafaSensei106/Riko-Chan/internal/utils"
 )
 
 func (b *Bot) handleCommand(ctx context.Context, message *tgbotapi.Message, user *models.User) {
