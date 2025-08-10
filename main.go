@@ -1,5 +1,7 @@
 package main
 
+import "github.com/MostafaSensei106/Riko-Chan/cmd"
+
 func main() {
-	println("hello world, from Riko-Chan")
+	cmd.Execute()
 }
